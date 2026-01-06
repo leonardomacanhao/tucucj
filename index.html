@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T.U.C.U.C.J. | Agenda Anual</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="brilho"></div>
+
+    <header>
+        <h1>T.U.C.U.C.J.</h1>
+        <p>Templo de Umbanda Cacique Urubatan e Cabocla Jurema</p>
+
+    </header>
+
+    <div class="logo-wrapper">
+        <div class="logo-terreiro"></div>
+    </div>
+
+
+
+
+    <section>
+        <div class="titulo">
+            <h2>Agenda Anual</h2>
+        </div>
+
+        <div class="agenda">
+            <a href="janeiro.html" class="evento oxossi"><span>Janeiro</span></a>
+            <a href="fevereiro.html" class="evento ogum"><span>Fevereiro</span></a>
+            <a href="marco.html" class="evento oxum"><span>Março</span></a>
+            <a href="abril.html" class="evento iansa"><span>Abril</span></a>
+            <a href="maio.html" class="evento xango"><span>Maio</span></a>
+            <a href="junho.html" class="evento iemanja"><span>Junho</span></a>
+            <a href="julho.html" class="evento omulu"><span>Julho</span></a>
+            <a href="agosto.html" class="evento nana"><span>Agosto</span></a>
+            <a href="setembro.html" class="evento ibejis"><span>Setembro</span></a>
+            <a href="outubro.html" class="evento pretovelho"><span>Outubro</span></a>
+            <a href="novembro.html" class="evento caboclo"><span>Novembro</span></a>
+            <a href="dezembro.html" class="evento oxala"><span>Dezembro</span></a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 • Terreiro de Axé • Fé, respeito e ancestralidade <br>
+        DIREITOS RESERVADOS
+    </footer>
+
+    <script>
+        const brilho = document.querySelector('.brilho');
+        window.addEventListener('mousemove', e => {
+            brilho.style.setProperty('--x', e.clientX + 'px');
+            brilho.style.setProperty('--y', e.clientY + 'px');
+        });
+    </script>
+
+</body>
+
+</html>
