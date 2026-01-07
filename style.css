@@ -81,7 +81,12 @@ header p {
   background-size: 121%;
   background-color: rgba(31,61,43,0.85);
 
-  box-shadow: 0 0 25px rgba(214,178,94,0.6);
+  box-shadow: 
+    0 0 30px rgba(214,178,94,0.8),
+    0 0 60px rgba(235,170,20,0.6),
+    0 0 90px rgba(214,178,94,0.4),
+    inset 0 0 30px rgba(214,178,94,0.3);
+  animation: brilho-intenso 1.5s ease-in-out infinite;
 }
 
 /* HALO */
@@ -92,38 +97,59 @@ header p {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(214,178,94,0.55),
-    rgba(214,178,94,0.25),
-    transparent 60%
+    rgba(235,170,20,0.8),
+    rgba(214,178,94,0.5),
+    rgba(214,178,94,0.2),
+    transparent 65%
   );
   animation: pulsar-axe 1.2s ease-in-out infinite;
   z-index: -15;
+  filter: drop-shadow(0 0 20px rgba(214,178,94,0.6));
+}
 }
 
 /* RAIOS */
 .logo-terreiro::after {
   content: "";
   position: absolute;
-  inset: -35%;
+  inset: -45%;
   border-radius: 50%;
   background: conic-gradient(
     rgba(214,178,94,0.0),
-    rgba(214,178,94,0.35),
+    rgba(235,170,20,0.55),
     rgba(214,178,94,0.0),
-    rgba(214,178,94,0.25),
-    rgba(235, 170, 20, 0)
+    rgba(235,170,20,0.45),
+    rgba(214,178,94,0.0),
+    rgba(235,170,20,0.35),
+    rgba(235,170,20,0)
   );
-  animation: girar-sol 22s linear infinite;
+  animation: girar-sol 18s linear infinite;
   z-index: -2;
+  filter: drop-shadow(0 0 15px rgba(235,170,20,0.5));
 }
 
 @keyframes pulsar-axe {
-  0%, 100% { transform: scale(0.95); opacity: 0.7; }
-  50% { transform: scale(1.05); opacity: 1; }
+  0%, 100% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 1; }
 }
 
 @keyframes girar-sol {
   100% { transform: rotate(360deg); }
+}
+
+@keyframes brilho-intenso {
+  0%, 100% { box-shadow: 
+    0 0 30px rgba(214,178,94,0.7),
+    0 0 60px rgba(235,170,20,0.5),
+    0 0 90px rgba(214,178,94,0.3),
+    inset 0 0 30px rgba(214,178,94,0.2);
+  }
+  50% { box-shadow: 
+    0 0 40px rgba(214,178,94,1),
+    0 0 80px rgba(235,170,20,0.8),
+    0 0 120px rgba(214,178,94,0.6),
+    inset 0 0 40px rgba(214,178,94,0.5);
+  }
 }
 
 /* CONTEÚDO */
